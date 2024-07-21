@@ -23,7 +23,51 @@ function App() {
 
   return (
     <>
-      <h1 className='text-4xl text-center text-white'>Password Generator</h1>
+      <div className='flex items-center justify-center '>
+        <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 pb-4 text-orange-500 bg-gray-700 text-center'>
+          <h1 className='text-white text-center my-3'>Password Generator</h1>
+          <div className='flex shadow rounded-lg overflow-hidden mb-4'>
+            <input
+            value={password}
+            className='outline-none w-full py-1 px-3'
+            placeholder='password'
+
+            type="text" />
+            <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button>
+          </div>
+          <div className='flex text-sm gap-x-2'>
+            <div className='flex items-center gap-x-1'>
+              <input
+               type="range" 
+               min={6}
+               max={20}
+               value={length}
+               id='passwordRange'
+               onChange={(e)=>setLength(e.target.value)}
+               className='cursor-pointer'
+              />
+              <label  htmlFor='passwordRange'>Length: {length}</label>
+            </div>
+            <div className='flex items-center gap-x-1'>
+              <input
+               type="checkbox"
+               id='numberInput'
+               checked={numberAllowed}
+               onChange={()=>setNumberAllowed((prev)=>!prev)}
+              />
+              <label htmlFor='numberInput'>Numbers</label>
+            </div>
+            <div className='flex items-center gap-x-1'>
+              <input type="checkbox"
+              id="characterInput" 
+              checked={charAllowed}
+              onChange={()=>setCharAllowed((prev)=>!prev)}
+              />
+              <label htmlFor="characterInput">Characters</label>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
