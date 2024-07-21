@@ -13,8 +13,13 @@ This project is a React-based Password Generator that allows users to create sec
 This project was built to enhance understanding of React and its hooks. Key learnings include:
 - Using the `useCallback` hook for optimization.
 - Using the `useEffect` hook to run code on initial render and when dependencies change.
-- Using the `useRef` hook to reference elements for DOM manipulation (actully used just to select the text in the input field).
+- Using the `useRef` hook to reference elements for DOM manipulation (actually used just to select the text in the input field).
 - Implementation of basic `Tailwind CSS` for styling.
 
 
 ## Here is the video of its working
+
+
+
+https://github.com/user-attachments/assets/4283fd9d-e8ee-4a55-a8f4-0a01915fc96d
+
